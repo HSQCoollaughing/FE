@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function fn(num) {
+        return new Promise(function (resolve, reject) {
+            if (typeof num === 'number') {
+                resolve();
+            } else {
+                reject();
+            }
+        }).then(function () {
+            console.log('参数是一个number值');
+        }, function () {
+            console.log('参数不是一个number值');
+        });
+    }
+
+    fn('haha');
+    fn(123);
+
+    function func(num) {
+        return new Promise(function (resolve, reject) {
+            if (typeof num === 'number') {
+                resolve();
+            } else {
+                reject();
+            }
+        }).then(function () {
+            console.log('参数是数字');
+        }).then(null, function () {
+            console.log('参数不是数字');
+        })
+    }
+
+    func(1);
+    func(true);
+</script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //简单的ajax原生实现
+    var url = 'https://hq.tigerbrokers.com/fundamental/finance_calendar/getType/2017-02-26/2017-06-10';
+    var result;
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('get', url, true);
+    xhr.send();
+    
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            result = xhr.responseText;
+            console.log(result);
+
+            //回调地狱
+            //result.someParams参数并没有被拿到是个undefined
+            var url2 = 'http:xxx.yyy.com/zzz?ddd=' + result.someParams;
+            var xhr2 = new XMLHttpRequest();
+            xhr2.open('get', url2, true);
+            xhr2.send();
+            
+            xhr2.onreadystatechange = function () {
+                if (xhr2.readyState == 4 && xhr2.status == 200) {
+                    console.log(xhr2.responseText);
+                }
+            };
+        }
+    };
+
+
+
+</script>
