@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*jQuery.fn = jQuery.prototype = {    //添加实例属性和方法
+            jquery : 版本
+
+            constructor : 修正指向问题
+
+            init() : 初始化和参数管理
+
+            selector : 存储选择字符串
+
+            length : this对象的长度
+
+            toArray() : 转数组
+
+            get() : 转原生集合
+
+            pushStack() : JQ对象的入栈
+
+            each() : 遍历集合
+
+            ready() : DOM加载的接口
+
+            slice() : 集合的截取
+
+            first() : 集合的第一项
+
+            last() : 集合的最后一项
+
+            eq() : 集合的指定项
+
+            map() : 返回新集合
+
+            end() : 返回集合前一个状态
+        }*/
+
+    </script>
+<script src="jquery-2.0.3.js"></script>
+<script>
+//alert( $().jquery );
+
+function A() {
+}
+// A.prototype.constructor = A;
+//A.prototype.constructor = Array;   会被修改
+
+//A.prototype.name = 'abc';
+//A.prototype.age = 11;
+
+/*A.prototype = {
+    constructor: A,
+    name: 'hello',
+    age: 30
+};
+
+var a1 = new A();
+alert( a1.constructor );*/
+
+
+//$(""),$(null),$(undefined),$(false)
+    /*if (!selector) {
+        return false;
+    }*/
+</script>
+<script>
+$(function () {
+   console.log($('li').css('background', 'red'));
+
+    $('li')[1].style.color = 'blue';
+});
+
+/*this = {
+    0: 'li',
+    1: 'li',
+    2: 'li',
+    length: 3
+};
+
+for (var i = 0; i < this.length; i++) {
+    this[i].style.backgroundColor = 'red';
+}*/
+</script>
+</head>
+<body>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+</body>
+</html>

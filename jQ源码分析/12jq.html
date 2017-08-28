@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script src="jquery-2.0.3.js"></script>
+<script>
+    function show() {
+
+    }
+
+//    alert( $.isFunction(show) );
+//    alert($.type(show))
+
+    var arr = [1,2];
+
+//    alert($.isArray(arr));
+//    alert(Array.isArray(arr));
+
+//    alert(null == null);    //true
+//    alert(undefined == null);    //true
+
+    var a = 'abc';
+    var b = new Date;
+
+    console.log($.type(null));
+    alert({}.toString.call(function(){}) === '[object Function]');
+    console.log({}.toString.call(new Date) === '[object Date]');
+    
+    console.log($.type([]));    //array
+</script>

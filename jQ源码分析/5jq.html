@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul></ul>
+</body>
+</html>
+<script src="jquery-2.0.3.js"></script>
+<script>
+$(function () {
+    /*var str = '<li>1</li><li>2</li><li>3</li><script>alert(5)<\/script>';
+
+    var arr = jQuery.parseHTML(str, document, true);
+    
+    console.log(arr);
+
+    $.each(arr, function (i) {
+        $('ul').append(arr[i]);
+    });*/
+
+    /*var a = ['a', 'b'];
+    var b = ['c', 'e'];
+    var json = {
+        0: 'n',
+        1: 'b',
+        2: 'a',
+        length: 3
+    };
+    
+    console.log($.merge(json, b));*/
+
+    $('<li>', {title: '2017', html: '爱笑会议室', css: {color: 'green'}}).appendTo($('ul'));
+});
+</script>

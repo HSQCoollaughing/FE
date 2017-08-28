@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+</body>
+</html>
+<script src="jquery-2.0.3.js"></script>
+<script>
+    var arr = [0, 1, 2, 3];
+
+    arr = $.grep(arr, function (n, i) {
+        return n > 1;
+    }, true);   // 如果有第3个参数,为true时就是取反,取n<1的新数组
+    
+    console.log(arr);
+
+    var a = [1, 2, 3];
+    var j = {name: 'chd', age: 20};
+    a = $.map(j, function (n, i) {
+        console.log(i);
+        console.log(n);
+        return n + 10;
+    });
+    
+    console.log(a);
+</script>

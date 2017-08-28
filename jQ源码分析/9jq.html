@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>div</div>
+<div>div</div>
+<div>div</div>
+<div>div</div>
+<span>span</span>
+</body>
+</html>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+//$.extend();
+//$.fn.extend();
+
+// 当只写一个对象字面量的时候,JQ中扩展插件的形式
+
+    // 扩展工具方法
+    $.extend({
+        aaa: function () {
+            alert(1);
+        },
+        bbb: function () {
+            alert(2);
+        }
+    });
+
+    //$.aaa();
+    //$.bbb();
+
+    // 扩展JQ实例方法
+    $.fn.extend({
+        aaa: function () {
+            alert(3);
+        },
+        bbb: function () {
+            alert(4);
+        }
+    })
+
+    //$().aaa();
+    //$().bbb();
+
+    //this指向
+    /*
+    * $.extend() -> this -> $ -> this.aaa -> $.aaa()
+    *
+    * $.fn.extend() -> this.fn -> $.fn -> this.fn.aaa -> $().aaa()
+    * */
+</script>
+<script>
+    // 当写多个对象字面量的时候,后面的对象都扩展到第一个对象上
+
+    /*var params = {job: 'webFE'};
+
+    $.extend(params, {name: 'chd', year: '2017'});
+
+    console.log(params);*/
+
+    // 还可以做 深拷贝 和  浅拷贝
+    var a = {};
+    var b = {name: {song: '一千年以后'}};
+    $.extend(true, a, b);   //第一个参数为true是深拷贝,默认都是浅拷贝的
+
+    //a.name = '发如雪';
+    a.name.song = '编号89757';
+    //alert(b.name.song);
+
+
+
+    /*jQuery.extend = jQuery.fn.extend = function () {
+        // 定义一些变量
+        if() {}     看是不是深拷贝
+
+        if() {}     看参数正确不
+
+        if() {}     看是不是插件情况
+
+        for () {    可能有多个对象情况
+
+            if() {}     防止循环引用
+
+            if() {}     深拷贝
+            else if(){}     浅拷贝
+        }
+    };*/
+
+
+//    var z = {};
+//    console.log($.extend(z, {name: z}));
+
+
+    var w = {name: {job: 'FE'}};
+    var t = {name: {age: 18}};
+
+    $.extend(true, w, t);
+    
+    console.log(w);
+</script>

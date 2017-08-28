@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+</body>
+</html>
+<script src="jquery-2.0.3.js"></script>
+<script>
+    var obj = { name: 'chris' };
+    var obj2 = new Object();
+    var arr = [];
+
+    /*function A() {
+    }
+
+    var a = new A();
+
+    console.log( $.isPlainObject(obj) );
+    
+    console.log($.isEmptyObject(a));*/
+
+    /*function A() {
+    }
+    A.prototype.constructor  = A;
+    A.prototype.show = function() {};
+
+    for (var attr in A.prototype) {
+        alert(attr);
+    }*/
+
+//    $.error('错误❌');
+
+    var str = '<li>1</li><li>2</li><script><\/script>';
+    // $.parseHTML第3个参数默认为false
+    console.log($.parseHTML(str, document, true));
+    
+    console.log(false && 2 && 3);
+    console.log(1 || 2);
+</script>

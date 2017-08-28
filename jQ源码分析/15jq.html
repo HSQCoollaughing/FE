@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script src="jquery-2.0.3.js"></script>
+<script>
+    /*function test() {
+     //        var val = true;
+
+     $.globalEval('var val = true;');
+     }
+
+     test();
+
+     alert(val);*/
+
+    // window.eval和eval有区别
+    /*function aaa() {
+     // window.eval('var a = 110');
+     var val = eval;
+
+     val('var a = 119');
+     }
+
+     aaa();
+     alert(a);*/
+
+    //    alert($.camelCase('margin-top'));
+
+//    console.log($.nodeName(document.body, 'body'));
+//    console.log(document.body.nodeName);
+
+    var arr = ['a', 'b', 'd', 'c', 'e'];
+    var obj = {name: 'hello', age: 20};
+
+    $.each(obj, function (i, val) {
+        console.log(i, val);
+    });
+</script>

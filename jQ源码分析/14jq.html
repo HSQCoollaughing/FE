@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script src="jquery-2.0.3.js"></script>
+<script>
+    var json = '{"name": "alibaba"}';
+    console.log($.parseJSON(json).name);
+
+    // JSON.parse和eval
+
+    // JSON.stringify()
+
+
+    var str = '<rss version="1.0"><channel><title>something</title></channel></rss>';
+    var xmlDoc = $.parseXML(str);
+    var $xml = $( xmlDoc );
+    console.log($xml.find('title'));
+
+</script>

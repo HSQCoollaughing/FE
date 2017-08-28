@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script src="jquery-2.0.3.js"></script>
+<script>
+//    alert ($.expando);
+    /*var cQ = $.noConflict();
+    var $ = 123;
+
+    cQ(function () {
+        alert($);
+    });*/
+
+    /*$(function () {});
+
+    $(document).ready(function(){});
+
+    $().ready();
+
+    $.ready();
+
+    DOMContentLoaded()
+
+
+
+    jQuery.ready.promise().done(fn);    //延迟对象
+
+    window.onload = function () {
+
+    };*/
+
+    $.holdReady(true);
+    $.getScript('a.js',function () {
+        $.holdReady(false);
+    });
+
+    $(function () {
+        alert(2);
+    });
+</script>

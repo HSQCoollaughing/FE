@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script src="jquery-2.0.3.js"></script>
+<script>
+//    function aaa() {
+//        alert(1);
+//    }
+//
+//    function bbb() {
+//        alert(2);
+//    }
+//
+//    var cb = $.Callbacks();
+//
+//    cb.add(bbb).add(aaa).fire();
+
+    /*document.addEventListener('click', function() {alert('老大');});
+    document.addEventListener('click', function() {alert('老二');});
+    document.addEventListener('click', function() {alert('老3');});*/
+
+    // 类似设计模式里的观察者模式
+
+    /*function ccc() {
+        alert(11);
+    }
+
+    (function () {
+        function ddd() {
+            alert(22);
+        }
+    })();
+
+    ccc();
+    ddd();*/
+
+    var cb = $.Callbacks('once');
+
+    function ccc() {
+        alert(11);
+    }
+
+    cb.add(ccc);
+
+    (function () {
+        function ddd() {
+            alert(22);
+        }
+        cb.add(ddd);
+    })();
+
+    cb.fire();
+    cb.fire();
+
+    /*
+    *   once
+    *   memory
+    *   unique
+    *   stopOnFalse
+    * */
+</script>

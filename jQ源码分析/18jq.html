@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<input type="button" value="点击">
+<input type="button" value="取消绑定">
+</body>
+</html>
+<script src="jquery-2.0.3.js"></script>
+<script>
+    /*function show() {
+        alert(this);
+    }
+
+    $('input:eq(0)').click($.proxy(show, window));
+
+    $('input:eq(1)').click(function () {
+        $('input:eq(0)').off();
+    });*/
+
+    /*function show(m, n) {
+        console.log(this);
+        console.log(m + n);
+    }
+
+
+    $.proxy(show, document)(3, 7);
+    $.proxy(show, document, 1, 2)();
+    $.proxy(show, document, 1)(7);*/
+
+    var obj = {
+        show: function() {
+            alert(this);
+        }
+    };
+
+//    $(document).click(obj.show);
+//    $(document).click($.proxy(obj.show, obj));
+    // 简写
+    $(document).click($.proxy(obj, 'show'));
+</script>

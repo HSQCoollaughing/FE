@@ -1,0 +1,19 @@
+<% include ../inc/header.html %>
+<div class="container">
+    <form action="/article/add" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="title">标题</label>
+            <input type="text" class="form-control" name="title" id="title" placeholder="标题">
+        </div>
+        <div class="form-group">
+            <label for="content">正文</label>
+            <textarea class="form-control" name="content" id="content" cols="30" rows="10"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="imgs">图片</label>
+            <input type="file" class="form-control" name="imgs" id="imgs">
+        </div>
+        <button type="submit" class="btn btn-danger">发表文章</button>
+    </form>
+</div>
+<% include ../inc/footer.html %>

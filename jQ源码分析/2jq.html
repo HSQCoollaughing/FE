@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*(function (win, undefined) {  //防止undefined被修改
+            window
+        })(window);*/
+
+        /*var undefined = 10;
+
+         alert(undefined);*/
+
+        /*"use strict";
+        a = 10;
+        var a = 010;*/
+
+//        var speed = 10;
+//        var a = a + speed;
+
+//        window.a == undefined;
+//        typeof window.a == 'undefined';
+
+        // var $ = 10;
+
+//        $.type();
+//        class2type = { '[Object String]' : 'string'}
+
+
+//        alert('(' +  '   1111111   '.trim()  + ')');
+
+
+        function A() {}
+        A.prototype.init = function() {};
+        A.prototype.css = function() {};
+
+        var a1 = new A();
+        a1.init();
+        a1.css();
+
+
+        function jQuery() {
+            return new jQuery.prototype.init();
+        }
+        jQuery.prototype.init = function () {
+
+        };
+        jQuery.prototype.css = function () {
+            
+        };
+
+        jQuery().css();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

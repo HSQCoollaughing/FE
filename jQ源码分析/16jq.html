@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            /*var aDiv = document.getElementsByTagName('div');
+            var str = 'hello';
+            var num = 11;
+            
+            console.log($.makeArray(aDiv));
+            console.log($.makeArray(str));
+            //内部使用需要传第二个参
+            console.log($.makeArray(num, {length: 0}));
+
+            alert(Object(str).length);*/
+        };
+    </script>
+</head>
+<body>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+</body>
+</html>
+<script src="jquery-2.0.3.js"></script>
+<script>
+    /*var str = '  hello   ';
+
+    alert('(' + $.trim(str) + ')');
+
+    alert('(' + str.trim() + ')');*/
+
+    var arr = ['a', 'b', 'c', 'd', 'e'];
+
+    alert($.inArray('aa', arr));
+</script>

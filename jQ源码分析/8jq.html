@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>div</div>
+<div>div</div>
+<div>div</div>
+<div>div</div>
+<span>span</span>
+</body>
+</html>
+<script src="jquery-2.0.3.js"></script>
+<script>
+$(function () {
+//    $('div').pushStack( $('span') ).css('color', 'pink').end().css('color', 'blue');
+
+//    $('div').slice(1, 3).css('color', 'yellow').end().css('background', '#0c9');
+
+    $('div').first().css('color', '#0cc');
+    $('div').last().css('background', 'blue');
+    $('div').eq(2).css('font-size', '30px')
+
+
+    var arr = ['a', 'b', 'c'];
+
+    var arr2 = $.map(arr, function (ele, i) {
+        return ele + i;
+    });
+    
+    console.log(arr2);
+
+});
+</script>
